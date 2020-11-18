@@ -13,7 +13,7 @@ function Home() {
                 name='nome'
                 value={nome}
                 onChange={e => setNome(e.target.value)} />
-            <h1>Olá, {hora.getHours() < 12 ? 'bom dia' : hora.getHours() < 22 ? 'boa tarde' : 'boa noite'} {nome}.</h1>
+            <h1>Olá{nome !== '' ? (hora.getHours() < 12 ? ', bom dia ' : hora.getHours() < 22 ? ', boa tarde ' : ', boa noite ') + nome : '.'}</h1>
         </div>
     )
 }
